@@ -27,7 +27,7 @@ class AppState extends EventEmitter {
       name: "Rent-a-car",
       confirmation: "123456A",
       address: "1234 Rocky Road, Moose, CA",
-      date: 12/31/22,
+      date: new Date('2022-12-02'),
       price: "$456",
       tripId: '62e54c2ed63fc1baa323b7e9'
     }), 
@@ -36,7 +36,7 @@ class AppState extends EventEmitter {
       name: "Hilton",
       confirmation: "123456A",
       address: "1234 Rocky Road, Moose, CA",
-      date: 12/31/22,
+      date: new Date('2022-12-31'),
       price: "$345",
       tripId: '62e54c2ebd11980e5cd0ce91'
     }),   
