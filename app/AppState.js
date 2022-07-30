@@ -1,9 +1,19 @@
+import { Reservation } from "./Models/Reservation.js"
+import { Trip } from "./Models/Trip.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = []
+
+  //FINISH HERE!!!!
+  /** @type {import('./Models/Trip').Trip[]} */
+  trips = [
+    new Trip({
+
+    })
+  ]
 }
 
 export const ProxyState = new Proxy(new AppState(), {
