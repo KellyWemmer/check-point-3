@@ -7,13 +7,24 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = []
 
-  //FINISH HERE!!!!
+
   /** @type {import('./Models/Trip').Trip[]} */
   trips = [
     new Trip({
+      name: "Yosemite"
+    }),
 
+    new Trip({
+      name: "DisneyLand"
     })
   ]
+  /** @type {import('./Models/Reservation').Reservation[]} */
+  reservations = [
+    new Reservation({
+      
+    })
+  ]
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {
