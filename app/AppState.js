@@ -11,20 +11,36 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Trip').Trip[]} */
   trips = [
     new Trip({
-      name: "Yosemite"
+      name: "Yosemite",
+      id: '62e54c2ed63fc1baa323b7e9'
     }),
 
     new Trip({
-      name: "DisneyLand"
+      name: "DisneyLand",
+      id: '62e54c2ebd11980e5cd0ce91'
     })
   ]
   /** @type {import('./Models/Reservation').Reservation[]} */
   reservations = [
     new Reservation({
-      
-    })
+      type: "vehicle",
+      name: "Rent-a-car",
+      confirmation: "123456A",
+      address: "1234 Rocky Road, Moose, CA",
+      date: 12/31/22,
+      price: "$456",
+      tripId: '62e54c2ed63fc1baa323b7e9'
+    }), 
+    new Reservation({
+      type: "hotel",
+      name: "Hilton",
+      confirmation: "123456A",
+      address: "1234 Rocky Road, Moose, CA",
+      date: 12/31/22,
+      price: "$345",
+      tripId: '62e54c2ebd11980e5cd0ce91'
+    }),   
   ]
-
 }
 
 export const ProxyState = new Proxy(new AppState(), {
