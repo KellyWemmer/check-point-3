@@ -22,7 +22,7 @@
           loading="lazy">
         <span class="ms-2">Wayfinder</span>
         <div class="container-fluid">
-          <form class="row p-3" id="trip-name" onsubmit="app.tripsController.createTrip()">
+          <form class="row p-3" id="trip-name" minlength="3" maxlength="15" onsubmit="app.tripsController.createTrip()">
             <input name=name id="name" required class="col-8 m-2" type="text" placeholder="Enter your trip name">
             <button class="col-4 btn btn-secondary m-2">Add</button>
           </form>

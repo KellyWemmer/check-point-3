@@ -32,10 +32,15 @@ export class TripsController{
             name: form.name.value,
             accommodations: ''
         }
-        console.log(newTrip);
-        tripsService.createTrip(newTrip)
-        Pop.toast('Trip Created', 'success')
-        form.reset()
+        if(newTrip.name.length < 3 || newTrip.name.length > 15) {
+            Pop.toast('Trip name must be between 3 and 15 characters','error')            
+        }
+        else {    
+            console.log(newTrip);
+            tripsService.createTrip(newTrip)
+            Pop.toast('Trip Created', 'success')
+            form.reset()
+        }
     }
 
     deleteTrip(id){
