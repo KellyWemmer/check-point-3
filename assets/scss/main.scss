@@ -15,5 +15,11 @@ main {
   flex-grow: 1;
 }
 
+@media (max-width: 768px) {
+  .trip-header {
+    display: none;
+  }
+}
+
 
 

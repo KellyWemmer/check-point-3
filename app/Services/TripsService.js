@@ -13,6 +13,14 @@ class TripsService {
         console.log('deleting', id)
         ProxyState.trips = ProxyState.trips.filter(t => t.id != id)
     }
+
+    toggleCollapse(tripId){
+
+        let trip = ProxyState.trips.find(t => t.id == tripId)
+        // @ts-ignore
+        trip.collapsed = !trip.collapsed
   
+        ProxyState.trips = ProxyState.trips
+    }
 }
 export const tripsService = new TripsService()

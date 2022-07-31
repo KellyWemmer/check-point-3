@@ -34,28 +34,30 @@
     <div class="container-fluid">
       <div class="row img-fluid" id="trip">
         <!-- Trip Data -->
-        <div class="col-md-12 bg-white rounded elevation-2 m-3 p-3">
+        <div class="col-12 bg-white rounded elevation-2 m-3 p-3">
           <section class="trip-card" >            
             <h3>Trip Name</h3>            
-          <div class="row p-3 d-flex justify-content-space-between">
+          <!-- <div class="row p-3 d-flex justify-content-space-between">
             <div class="col-2">Type</div>
             <div class="col-2">Name</div>
             <div class="col-2">Confirmation</div>
             <div class="col-2">Address</div>
             <div class="col-2">Date</div>
             <div class="col-2">Price</div>                
-          </div>
+          </div> -->
           <!-- Reservation Data -->
+          <!-- SECTION DESKTOP VIEW -->
           <section id="reservation">
             <div class="row bg-primary rounded m-1 p-3 d-flex justify-content-space-between">
-              <div class="col-2">Type</div>
-              <div class="col-2">Name</div>
-              <div class="col-2">Confirmation</div>
-              <div class="col-2">Address</div>
-              <div class="col-2">Date</div>
-              <div class="col-2">Price</div>
+              <div class="col-1 col-md-2">Type</div>
+              <div class="col-9 col-md-2">Name</div>
+              <div class="col-2 col-md-2">Confirmation</div>
+              <div class="col-10 col-md-2">Address</div>
+              <div class="col-2 col-md-2">Date</div>
+              <div class="col-12 col-md-1">Price</div>
             </div>
-          </section> 
+          </section>
+           <!--SECTION END DESKTOP VIEW  -->
           <!-- Form Data -->
           <div class="row" id="reservation-form">
             <div class="col-12">
@@ -75,12 +77,18 @@
                   <button class="btn btn-secondary col-1">Add</button>
                 </div>
               </form> -->              
-            <!-- </div>
+            </div>
           </div>
           <h3>Notes</h3>
           <textarea name="" id="" cols="30" rows="10"></textarea>
+        </section>
+        <section class="row p-3">
+        <div class="col-12 text-end fw-bold">
+        Trip Total: $${this.TripTotal}
+        </div>
+        </section>
         </section>      
-      </div> -->
+      </div>
     </div>
   </main>
   <footer class="bg-dark text-light">

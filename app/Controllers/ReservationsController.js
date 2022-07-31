@@ -4,7 +4,7 @@ export class ReservationsController {
     constructor(){
         console.log("Res controller loaded")
     }
-
+    
     createReservation(tripId){   
         window.event.preventDefault()
         console.log("creating a res for Trip", tripId);
@@ -27,4 +27,5 @@ export class ReservationsController {
             reservationsService.deleteReservation(id)
         }
     }
+    
 }

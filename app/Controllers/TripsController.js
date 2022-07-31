@@ -51,9 +51,9 @@ export class TripsController{
         saveState()
     }
 
-    toggleCollapse(listId){
+    toggleCollapse(tripId){
 
-        listsService.toggleCollapse(listId)
+        tripsService.toggleCollapse(tripId)
     
       }
     
