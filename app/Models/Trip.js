@@ -13,7 +13,15 @@ export class Trip {
         return `
     <div class="col-12 bg-white rounded elevation-2 m-2 p-3" >
         <h3><div onclick="app.tripsController.toggleCollapse('${this.id}')">${this.name}</div></h3>
-        <section class="trip-card justify-content-space-between ${this.collapsed ? 'collapse' : ''}">            
+        <section class="trip-card justify-content-space-between ${this.collapsed ? 'collapse' : ''}">
+            <div class="row p-3">
+                <div class="d-none d-md-block col-md-2"><strong>Type</strong></div>
+                <div class="d-none d-md-block col-md-2"><strong>Name</strong></div>
+                <div class="d-none d-md-block col-md-2"><strong>Confirmation</strong></div>
+                <div class="d-none d-md-block col-md-2"><strong>Address</strong></div>
+                <div class="d-none d-md-block col-md-2"><strong>Date</strong></div>
+                <div class="d-none d-md-block col-md-2"><strong>Price</strong></div>                
+            </div>            
           <i class="mdi mdi-delete-forever px-2 unselectable selectable d-flex justify-content-end" onclick="app.tripsController.deleteTrip('${this.id}')"></i>                      
        
         <section id="reservation">          
