@@ -15,10 +15,16 @@ export class ReservationsController {
             confirmation: form.confirmation.value,
             address: form.address.value,
             date: form.date.value,
-            price: form.price.value,
+            price: parseInt(form.price.value),
             tripId: tripId
         }
         console.log(newReservation);
         reservationsService.createReservation(newReservation)
+    }
+
+    deleteReservation(id){
+        if(window.confirm("Are you sure you want to delete this reservation?")){
+            reservationsService.deleteReservation(id)
+        }
     }
 }

@@ -5,13 +5,15 @@ export class Trip {
     constructor(data){
         this.id = data.id || generateId()
         this.name = data.name
+        this.accommodations = data.accommodations
     }
 
     get Template(){
         return `
     <div class="col-12 bg-white rounded elevation-2 m-2 p-3">
         <section class="trip-card justify-content-space-between">            
-          <h3>${this.name}</h3>            
+          <h3>${this.name}<i class="mdi mdi-delete-forever px-2 unselectable selectable d-flex justify-content-end" onclick="app.tripsController.deleteTrip('${this.id}')"></i></h3>
+                      
         <div class="row p-3">
           <div class="col-2">Type</div>
           <div class="col-2">Name</div>
@@ -44,9 +46,9 @@ export class Trip {
         </div>
       </div>
       <h3>Notes</h3>
-      <textarea name="" id="" cols="40" rows="5"></textarea>
-        </section>              
-      </section>      
+            <textarea name="" id="" cols="40" rows="5"></textarea>
+        </section>      
+        </div>
     </div>
         `
     }

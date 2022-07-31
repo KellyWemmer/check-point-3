@@ -12,32 +12,34 @@ class AppState extends EventEmitter {
   trips = [
     new Trip({
       name: "Yosemite",
-      id: '62e54c2ed63fc1baa323b7e9'
+      id: '62e54c2ed63fc1baa323b7e9',
+      accommodations: ''
     }),
 
     new Trip({
       name: "DisneyLand",
-      id: '62e54c2ebd11980e5cd0ce91'
+      id: '62e54c2ebd11980e5cd0ce91',
+      accommodations: ''
     })
   ]
   /** @type {import('./Models/Reservation').Reservation[]} */
   reservations = [
     new Reservation({
-      type: "vehicle",
+      type: "🚗",
       name: "Rent-a-car",
       confirmation: "123456A",
       address: "1234 Rocky Road, Moose, CA",
-      date: new Date('2022-12-02'),
-      price: "$456",
+      date: '2022-12-02',
+      price: 456,
       tripId: '62e54c2ed63fc1baa323b7e9'
     }), 
     new Reservation({
-      type: "hotel",
+      type: "✈",
       name: "Hilton",
       confirmation: "123456A",
       address: "1234 Rocky Road, Moose, CA",
-      date: new Date('2022-12-31'),
-      price: "$345",
+      date: '2022-12-31',
+      price: 345,
       tripId: '62e54c2ebd11980e5cd0ce91'
     }),   
   ]

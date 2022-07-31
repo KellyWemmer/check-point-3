@@ -21,7 +21,8 @@ export class Reservation{
           <div class="col-2">${this.confirmation}</div>
           <div class="col-2">${this.address}</div>
           <div class="col-2">${this.date}</div>
-          <div class="col-2">${this.price}</div>
+          <div class="col-1">$${this.price}</div>
+          <i class="mdi mdi-delete-forever px-2 col-1 unselectable selectable d-flex justify-content-center" onclick="app.reservationsController.deleteReservation('${this.id}')"></i>
         </div>
         `
     }

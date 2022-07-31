@@ -20,7 +20,13 @@
       <a class="navbar-brand ms-3" href="#">
         <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
           loading="lazy">
-        <span class="ms-2">Wayfinder<i class="mdi mdi-plus-box-outline p-3" onclick="app.tripsController.createTrip()"></i></span>
+        <span class="ms-2">Wayfinder</span>
+        <div class="container-fluid">
+          <form class="row p-3" id="trip-name" onsubmit="app.tripsController.createTrip()">
+            <input name=name id="name" required class="col-8 m-2" type="text" placeholder="Enter your trip name">
+            <button class="col-4 btn btn-secondary m-2">Add</button>
+          </form>
+        </div>
       </a>
     </nav>
   </header>
@@ -68,15 +74,13 @@
                 <div class="row d-flex justify-content-end">
                   <button class="btn btn-secondary col-1">Add</button>
                 </div>
-              </form> -->
-              
-            </div>
+              </form> -->              
+            <!-- </div>
           </div>
           <h3>Notes</h3>
           <textarea name="" id="" cols="30" rows="10"></textarea>
         </section>      
-      </div>
-
+      </div> -->
     </div>
   </main>
   <footer class="bg-dark text-light">
