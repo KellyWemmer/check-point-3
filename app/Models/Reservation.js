@@ -22,7 +22,7 @@ export class Reservation{
           <div class="col-12 col-md-2">${this.address}</div>
           <div class="col-4 col-md-2">${this.date}</div>
           <div class="col-4 col-md-1">$${this.price}</div>
-          <i class="col-4 col-md-1 mdi mdi-delete-forever px-2 text-end" onclick="app.reservationsController.deleteReservation('${this.id}')"></i>
+          <i class="col-4 col-md-1 mdi mdi-delete-forever px-2 justify-content-center" onclick="app.reservationsController.deleteReservation('${this.id}')"></i>
         </div>
         `
     }

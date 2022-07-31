@@ -24,13 +24,13 @@ export class TripsController{
     }
 
     createTrip() {
-        debugger
+        
         window.event.preventDefault()
         console.log('creating Trip!');
         let form = window.event.target
         let newTrip = {
             name: form.name.value,
-            accommodations: form.accommodations.value
+            accommodations: ''
         }
         console.log(newTrip);
         tripsService.createTrip(newTrip)
