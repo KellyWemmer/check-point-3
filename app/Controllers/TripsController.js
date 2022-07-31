@@ -35,6 +35,7 @@ export class TripsController{
         console.log(newTrip);
         tripsService.createTrip(newTrip)
         Pop.toast('Trip Created', 'success')
+        form.reset()
     }
 
     deleteTrip(id){
@@ -44,9 +45,9 @@ export class TripsController{
     }
 
     addTripNote(id) {
-        let trip = ProxyState.trips.find(t => t.id == id)
-        let note = document.getElementById("text-submit").value
-        trip.accommodations = note
+        let trip = ProxyState.trips.find(t => t.id == id)        
+        let newText = window.event.target.value        
+        trip.accommodations = newText
         console.log(ProxyState.trips)
         saveState()
     }
