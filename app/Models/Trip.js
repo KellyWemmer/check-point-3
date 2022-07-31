@@ -46,7 +46,13 @@ export class Trip {
         </div>
       </div>
       <h3>Notes</h3>
-            <textarea name="" id="" cols="40" rows="5"></textarea>
+            <textarea name="text-submit" id="text-submit" cols="40" rows="5" onblur="app.tripsController.addTripNote('${this.id}')">${this.accommodations}</textarea>
+            </section>
+        <section class="row p-3">
+        <div class="col-12 text-end fw-bold">
+        Trip Total: $${this.TripTotal}
+        </div>
+        </section>
         </section>      
         </div>
     </div>
@@ -65,5 +71,12 @@ export class Trip {
             return '<p> no reservations yet </p>'
         }
     }
+
+    get TripTotal(){        
+        let total = 0
+        let reservations = ProxyState.reservations.filter(r => r.tripId == this.id)
+        reservations.forEach(r => total += r.price)
+        return total
+      }
     
 }

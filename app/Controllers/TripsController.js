@@ -42,4 +42,19 @@ export class TripsController{
             tripsService.deleteTrip(id)
         }
     }
+
+    addTripNote(id) {
+        let trip = ProxyState.trips.find(t => t.id == id)
+        let note = document.getElementById("text-submit").value
+        trip.accommodations = note
+        console.log(ProxyState.trips)
+        saveState()
+    }
+
+    toggleCollapse(listId){
+
+        listsService.toggleCollapse(listId)
+    
+      }
+    
 }
